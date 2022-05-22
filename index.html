@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licorería El Erupto Feliz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    
+    <!--NAVEGATION STARS-->
+    <div class="container">
+        <div class="circle"></div>
+    <header class="header">
+        <a href="#" class="logo">El Erupto <span id="enlace">Feliz</span></a>
+        <div class="toggle" onclick="toggleMenu()"></div>
+        <ul class="navegation">
+            <li><a href="#inicio" class="link">Inicio</a></li>
+            <li><a href="#acerca de" class="link">Acerca De</a></li>
+            <li><a href="#marcas" class="link">Marcas</a></li>
+            <li><a href="#vinos" class="link">Vinos</a></li>
+            <li><a href="#contacto" class="link">Contacto</a></li>
+        </ul>
+    </header>
+    <!--MAIN STARS-->
+    <div class="content">
+        <div class="textBox">
+            <h2>Venta de <span id="enlace">Licores</span></h2>
+            <p><em>Si no bebes, ¿Como sabran tus amigos que los amas a las 2 de la madrugada?</em></p>
+            <a id="a" href="#">
+                <span>Leer Más</span>
+                <div class="liquid" id="enlace"></div>
+            </a>
+        </div>
+        <div class="imgBox">
+            <img src="/img1.png" class="light" alt="cerveza-polar-bebidad-alcoholica-licor-trago">
+        </div>
+    </div>
+    <ul class="bebidas">
+        <li><img src="/thumb1.png" onclick="imgSlider('/img1.png');changeCircleColor('#ee9b00')" alt="cerveza-licor-bar"></li>
+        <li><img src="/thumb3.png" onclick="imgSlider('/img3.png');changeCircleColor('#6a040f')" alt=""></li>
+    </ul>
+     <!--MAIN ENDS-->
+</div>
+    <!--NAVEGATION ENDS-->
+
+    <!--ABOUT STARS-->
+    <section class="acerca de" id="acerca de">
+        <div class="container-about">
+            <div class="row">
+                <div class="img">
+                    <img src="/Solera.png" class="about-img">
+                </div>
+                <div class="info">
+                    <span>Acerca De</span>
+                    <h3 class="title">Esta Página Web</h3>
+                    <p>Página creada como practica de CSS y Javascript aplicada en el diseño web... Y porque tenia unas imagenes bur de cartelua. En fin esta creada sin el fin de vender nada solo de practica si la quieres agarrar como plantilla pedo tuyo.</p>
+                    <a href="#" class="btn">Leer Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ABOUT ENDS-->
+
+    <!--CERVEZAS STARS-->
+    <section class="marcas" id="marcas">
+        <div class="container-card">
+            <div class="card">
+                <div class="circle2">
+                <img src="/cerveza1.png" class="cerv">
+            </div>
+                <div class="content2">
+                    <h4>Light</h4>
+                    <p>Quédate con tu cerveza, la cerveza es un flujo continuo de sangre, un amante continuoa</p>
+                    <a href="#" class="btn">Leer Más</a>
+                </div>
+                <img src="/light-lata.png" class="product">
+            </div>
+            <div class="card">
+                <div class="circle2">
+                <img src="/cerveza2.png" class="cerv">
+            </div>
+                <div class="content2">
+                    <h4>Light</h4>
+                    <p>Cualquiera puede beber una cerveza, pero se necesita inteligencia para poder disfrutarla</p>
+                    <a href="#" class="btn">Leer Más</a>
+                </div>
+                <img src="/polar-ice-lata.png" class="product">
+            </div>
+        </div>
+    </section>
+    <!--CERVEZAS ENDS-->
+    <!--VINOS STARS-->
+    <section class="vinos" id="vinos">
+        <div class="container3">
+            <div class="card2">
+                <div class="imgBx">
+                    <img src="/Pomar Blanco.png">
+                    <h4>Pomar Blanco</h4>
+                </div>
+                <div class="content3">
+                <a href="#" class="btn">Comprar</a>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="imgBx">
+                <img src="/Pomar Rosado.png">
+                <h4>Pomar Rosado</h4>
+            </div>
+            <div class="content3">
+            <a href="#" class="btn">Comprar</a>
+        </div>
+    </div>
+    <div class="card2">
+        <div class="imgBx">
+            <img src="/Pomar Syrah.png">
+            <h4>Pomar Syrah</h4>
+        </div>
+        <div class="content3">
+        <a href="#" class="btn">Comprar</a>
+    </div>
+    </section>
+    <!--VINOS ENDS-->
+
+    <!--CONTACTO STARS-->
+    <section class="contacto" id="contacto">
+        <div class="container-contact">
+        <div class="container5">
+            <div class="contactInfo">
+                <h3>Contacto info</h3>
+                <ul class="info">
+                    <li>
+                        <p><i class="fa-solid fa-location-dot"></i></p>
+                        <p> No es pedo tuyo :v</p>
+                    </li>
+                    <li>
+                        <p><i class="fa-solid fa-at"></i></p>
+                        <p> jesusgavidiajga28@gmail.com</p>
+                    </li>
+                    <li>
+                        <p><i class="fa-solid fa-phone"></i></p>
+                        <p> +58241577117</p>
+                    </li>
+                </ul>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+                <div class="contactForm">
+                    <h3>Enviar <span>Mensaje</span></h3>
+                    <div class="formBox">
+                        <div class="inputBox w40">
+                            <input type="text"required>
+                            <span>Nombre</span>
+                        </div>
+                        <div class="inputBox w40">
+                            <input type="text"required>
+                            <span>Apellido</span>
+                        </div>
+                        <div class="inputBox w40">
+                            <input type="email"required>
+                            <span>Correo</span>
+                        </div>
+                        <div class="inputBox w40">
+                            <input type="number"required>
+                            <span>Teléfono</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea required></textarea>
+                            <span>Mensaje</span>
+                        </div>
+                        <div>
+                            <input type="submit"  class="btn" value="Enviar Mensaje">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </section>
+    <!--CONTACTO ENDS-->
+
+    <!--FOOTER STARS-->
+    <footer>
+        <div class="footer-content">
+            <h3>El erupto <span>Feliz</span></h3>
+            <p>Soy un puto asco adaptando páginas a dispositivos :(</p>
+        </div>
+        <ul class="social2">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </ul>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 jga.28</p>
+        </div>
+    </footer>
+
+
+    <!--FOOTER ENDS-->
+
+    <!--JS STARS-->
+    <script src="script.js"></script>
+    <!--JS ENDS-->
+</body>
+</html>

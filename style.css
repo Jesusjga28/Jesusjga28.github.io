@@ -1,0 +1,946 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    text-decoration:none;
+    list-style:none;
+}
+
+/*COLORS STAR*/
+:root{ 
+--text-color:#ffffff;
+--span-color:#f48c06;
+--main-color:#111111;
+}
+/*COLORS ENDS*/
+
+body{
+    background-color: var(--main-color);
+}
+
+/*NAVEGATION STARS*/
+.container{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    padding:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:var(--main-color);
+}
+
+.circle{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: var(--span-color);
+    clip-path:circle(600px at right 800px);
+}
+
+header{
+    position:fixed; /*TENER EN CUENTA POR EL STICKY*/
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100000; /*TENER EN CUENTA POR EL STICKY*/
+}
+
+header.sticky{
+    padding:10px 100px;
+    background-color:var(--main-color);
+}
+
+header .logo{
+    position:relative;
+    max-width:400px;
+    Color:var(--text-color);
+    font-size:1.5rem;
+}
+
+header .logo span{
+    Color:var(--span-color);
+    font-size:1.6rem;
+    font-weight:900;
+}
+
+header ul{
+    position:relative;
+    display:flex;
+}
+
+
+header ul li a{
+    display:inline-block;
+    padding:10px;
+    color:var(--text-color);
+    margin-block:2px;
+    position:relative;
+}
+
+.link::after{
+    content:'';
+    width:100%;
+    height:1px;
+    background-color:var(--span-color);
+    border-radius:4px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    transform:scale(0);
+    transform-origin:left;
+    transition: transform .25s ease;
+}
+
+.link:hover::after{
+    transform:scale(1);
+}
+
+/*NAVEGATION ENDS*/
+
+/*MAIN STARS*/
+.content{
+    position:relative;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.content .textBox{
+    position:relative;
+    max-width:500px;
+    margin-top: 10px;
+}
+
+.content .textBox h2{
+    color:var(--text-color);
+    font-size:5rem;
+    line-height:5rem;
+    font-weight:700;
+    text-align:center;
+}
+
+.content .textBox span{
+    color:var(--span-color);
+    font-size:4.7rem;
+}
+
+.content .textBox p{
+    color:var(--text-color);
+    font-size:1.5rem;
+    margin-top:20px;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+/*BTN STARS*/
+
+#a{
+    position:relative;
+    padding:10px 30px;
+    display:block;
+    text-decoration:none;
+    width:200px;
+    left:35%;
+    overflow: hidden;
+}
+
+#a span{
+    position:relative;
+    z-index:1;
+    color:#ffffff;
+    font-size:1.3rem;
+    letter-spacing:2px;
+    text-align: center;
+}
+
+#a .liquid{
+    position:absolute;
+    left:0;
+    top:-80px;
+    width:200px;
+    height:200px;
+    background:var(--span-color);
+    box-shadow:inset 0 0 50px rgba(236, 230, 230, 0.335);
+    transition:.5s
+}
+
+#a:hover .liquid{
+    top:-120px;
+}
+
+#a .liquid:before,
+#a .liquid:after{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:200%;
+    top:0;
+    left:50%;
+    transform:translate(-50%, -75%);
+}
+
+#a .liquid:before{
+    border-radius:45%;
+    background: rgba(20,20,20,1);
+    animation: animate 5s linear infinite;
+
+}
+
+#a .liquid:after{
+    border-radius:40%;
+    background: rgba(20,20,20,0.5);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform:translate(-50%, -75%) rotate(0deg);
+    }
+    100%{
+        transform:translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+/*BTN ENDS*/
+
+.content .imgBox{
+    width:400px;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    padding-right:30px;
+    margin-top:10px;
+    padding-left: 50px;
+}
+
+.content .imgBox img{
+    margin-top:10px;
+    max-width:800px;
+}
+
+/*IMG IN BOTTOMS*/
+
+.bebidas{
+    position:absolute;
+    left:50%;
+    bottom:40px;
+    transform:translateX(-40%);
+    display:flex;
+}
+
+.bebidas li{
+    display:inline-block;
+    margin:0 10px;
+    cursor:pointer;
+    transition: .5s;
+}
+
+.bebidas li:hover{
+    transform:translateY(-15%);
+}
+
+.bebidas li img{
+    max-width:50px;
+}
+/*MAIN ENDS*/
+
+/*ABOUT STARS*/
+
+.container-about{
+    background-color:var(--main-color);
+    padding:20px 80px;
+    width:100%;
+    margin-top:40px;
+}
+
+.row{
+    margin-top:60px;
+    background-color: rgba(255, 255, 255, 0.044); 
+    backdrop-filter: blur(5px); 
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.row img{
+    width:50%;  
+    margin-left:50px;
+    display:flex;
+    align-content: center;
+}
+
+.row .info{
+    padding:10px;
+    margin:5px;
+}
+
+.row .info .title{
+    font-size:2rem;
+    color:var(--text-color);
+    font-weight:900;
+}
+
+.row .info span{
+    font-size:2rem;
+    color:var(--span-color);
+    font-weight:700;
+}
+
+.row .info p{
+    font-size:1.2rem;
+    margin-top:10px;
+    color:var(--text-color);
+}
+
+.btn {
+  margin-top:10px;
+  align-items: center;
+  background: var(--span-color);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  transition: .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+  width: max-content;
+  word-break: normal;
+  word-spacing: normal;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+}
+/*ABOUT ENDS*/
+
+/*CERVEZAS STARS*/
+
+.container-card{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:20px;
+    padding:10px 10px;
+    align-items: center;
+    width:100%;
+}
+
+.card{
+    position:relative;
+    width:300px;
+    height:350px;
+    margin:20px;
+    border-radius:10px;
+    transition:.5s;
+    transition-delay:.5s;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.card:hover{
+    width:600px;
+    transition-delay:0;
+}
+
+.card .circle2{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card .circle2::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.044); 
+    backdrop-filter: blur(5px); 
+    clip-path:circle(120px at center);
+    transition:.5s;
+}
+
+.card:hover .circle2::before{
+    clip-path:circle(400px at center);
+}
+
+.card .circle2 .cerv{
+    position:relative;
+    height:150px;
+    width:200px;
+    transition:.5s;
+    transition-delay:.5s;
+}
+
+.card:hover .circle2 .cerv{
+    transform:scale(0);
+    transition-delay:0;
+}
+
+.content2{
+    position:relative;
+    width:50%;
+    left:20%;
+    padding:20px 20px 20px 40px;
+    opacity: 0;
+    transition:.5s;
+    visibility:hidden;
+}
+
+.card:hover .content2{
+    left:0;
+    opacity: 1;
+    visibility:visible;
+    transition-delay: .5s;
+}
+
+.content2 h4{
+    color:var(--text-color);
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.content2 p{
+    color:var(--text-color);
+    margin-top:5px;
+}
+
+.card .product{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    height:400px;
+    transition:.5s;
+    transition-delay:0;
+}
+
+.card:hover .product{
+    left:72%;
+    transform:translate(-50%,-50%) scale(1);
+    transition-delay:.5s;
+}
+/*CERVEZAS ENDS*/
+
+/*VINOS STARS*/
+
+.container3{
+    margin-top:40px;
+    position:relative;
+    z-index:100;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    max-width: 100%;
+}
+
+.container3 .card2{
+    position:relative;
+    width:300px;
+    height:500px;
+    margin:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: rgba(255, 255, 255, 0.044); 
+    backdrop-filter: blur(5px); 
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+    flex-direction: column;
+}
+
+.container3 .card2 .imgBx{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+    transition:.5s ease-in-out;
+}
+
+.container3 .card2:hover .imgBx{
+    transform: translateY(-60px);
+}
+
+.container3 .card2 .imgBx img{
+    max-width:100%;
+    transition:.5s ease-in-out;
+}
+
+.container3 .card2:hover .imgBx img{
+    transform: translate(-20px, -40px) rotate(25deg) scale(1);
+}
+
+.container3 .card2 .imgBx  h4{
+    color:var(--text-color);
+    font-size:1.5rem;
+    font-weight:600;
+    padding:10px;
+}
+
+.container3 .card2 .content3{
+    position:relative;
+    bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.container3 .card2 .content3 .btn{
+    padding:10px;
+}
+/*VINOS ENDS*/
+
+/*CONTACTOS STARS*/
+
+.container-contact{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:40px;
+    padding:20px 80px;
+}
+
+.container5{
+    position:relative;
+    width:90%;
+    height:600px;
+    display:flex;
+    z-index:1000;
+}
+
+.container5 .contactInfo{
+    position:absolute;
+    top:100px;
+    width:350px;
+    height:400px;
+    background-color:var(--span-color);
+    z-index:1;
+    padding:40px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:10px 10px 5px rgba(0,0,0,0.2);
+}
+
+.container5 .contactInfo h3{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--text-color);
+}
+
+.container5 .contactInfo ul.info{
+     position:relative;
+     margin:20px 0;
+}
+
+.container5 .contactInfo ul.info li{
+    position:relative;
+    display:flex;
+    margin:20px 0;
+    cursor:pointer;
+    align-items:flex-start;
+   top:-10px;
+}
+
+.container5 .contactInfo ul.info li p:nth-child(1) i{
+    width:100%;
+    color:var(--text-color);
+}
+
+.container5 .contactInfo ul.info li p:nth-child(2){
+    color:var(--text-color);
+    margin-left:10px;
+}
+
+.container5 .contactInfo .social{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container5 .contactInfo .social a{
+    padding:10px;
+    color:var(--text-color);
+    font-size:2rem;
+    margin-top:-20px;
+}
+
+.container5 .contactInfo .social a:hover{
+    color:var(--main-color);
+}
+
+.container5 .contactForm{
+    position:absolute;
+    padding:70px 50px;
+    padding-left:250px;
+    margin-left:150px;
+    background-color: rgba(255, 255, 255, 0.044); 
+    backdrop-filter: blur(5px); 
+    width:83%;
+    height:100%;
+    box-shadow:10px 10px 5px rgba(0,0,0,0.5);
+}
+
+.container5 .contactForm h3{
+    font-size:2rem;
+    color:var(--text-color);
+    text-align: center;
+}
+
+.container5 .contactForm span:nth-child(1){
+    color:var(--span-color);
+}
+
+.container5 .contactForm .formBox{
+    position:relative;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    padding-top:30px;
+}
+
+.container5 .contactForm .formBox .inputBox{
+    position:relative;
+    margin-bottom: 35px;
+}
+
+.container5 .contactForm .formBox .inputBox.w40{
+    width:47%;
+}
+
+.container5 .contactForm .formBox .inputBox.w100{
+    width:100%;
+}
+
+.container5 .contactForm .formBox .inputBox input,
+.container5 .contactForm .formBox .inputBox textarea{
+    width:100%;
+    resize:none;
+    padding:5px 0;
+    font-size:1rem;
+    background-color: rgba(255, 255, 255, 0.044); 
+    backdrop-filter: blur(5px); 
+    color:var(--text-color);
+    border:none;
+    outline: none;
+}
+
+.container5 .contactForm .formBox .inputBox textarea{
+    height:120px;
+}
+
+.container5 .contactForm .formBox .inputBox span{
+    position:absolute;
+    left:0;
+    padding:5px 0;
+    pointer-events: none;
+    color:var(--text-color);
+    font-size:1rem;
+    transition:.2s;
+}
+
+.container5 .contactForm .formBox .inputBox input:focus ~ span,
+.container5 .contactForm .formBox .inputBox input:valid ~ span,
+.container5 .contactForm .formBox .inputBox textarea:focus ~ span,
+.container5 .contactForm .formBox .inputBox textarea:valid ~ span{
+    transform: translateY(-30px);
+    color:var(--span-color);
+}
+
+.container5 .contactForm .formBox .inputBox .btn{
+    padding:10px;
+   bottom: 20px;
+   color:var(--text-color);
+   align-items: center;
+   justify-content: center;
+}
+/*CONTACTOS ENDS*/
+
+/*FOOTER STARS*/
+footer{
+    background-color: rgba(255, 255, 255, 0.044); 
+    backdrop-filter: blur(5px); 
+    height:auto;
+    width:100%;
+    color:var(--text-color);
+}
+
+.footer-content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.footer-content h3{
+    font-size:2rem;
+    font-weight:700;
+    line-height:3rem;
+}
+
+.footer-content span{
+    color:var(--span-color);
+}
+
+.footer-content p{
+    max-width:500px;
+    margin:10px auto;
+    line-height: 28px;
+    font-size:1rem;
+}
+
+ul.social2{
+    text-align: center;
+    padding:10px;
+}
+
+ul.social2 i{
+    color:var(--text-color);
+    font-size:2rem;
+    text-align:center;
+    padding:10px;
+}
+
+.footer-bottom{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/*FOOTER ENDS*/
+
+/*RESPONSIVE STAR*/
+@media (max-width:991px){
+   
+   header{
+    padding: 10px 100px;
+   }
+   
+   header .logo{
+    font-size: 1.5rem;
+    max-width:100%;
+   }
+
+   header .logo span{
+    font-size: 1.7rem;
+   }
+
+   header ul{
+        display:none;
+   }
+
+   header ul.navegation.active{
+    position:fixed;
+    top: 60px;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    z-index:100;
+   }
+
+   .toggle{
+    position:fixed;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    background: url(/menu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    right:50px;
+    z-index:1000;
+}
+
+    .toggle.active{
+        background: url(/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    right:50px;
+    }
+
+   .container{
+    padding:10px 10px 120px;
+   }
+
+   .content{
+       margin-top:100px;
+       flex-direction: column;
+   }
+
+   .content .textBox{
+       max-width: 100%;
+   }
+
+   .content .textBox h2{
+    font-size: 3rem;
+    line-height: 3rem;
+   }
+
+   .content .textBox span{
+    font-size: 3rem;
+    line-height: 3rem;
+   }
+
+   .content .textBox p{
+       font-size:1rem;
+       padding:10px;
+   }
+
+   .circle{
+    clip-path: circle(500px at center bottom);
+   }
+
+   .bebidas{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    bottom: 5px;
+    transform: translateX(-40%);
+    display: flex;
+    flex-direction: column;
+   }
+
+   .content .imgBox img{
+    max-width: 100px;
+   }
+
+   .row{
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
+   .row img {
+    width: 20%;
+    margin-left: 20px;
+    display: flex;
+  }
+   
+    .card{
+        width:auto;
+        max-width:350px;
+        align-items:flex-start;
+    }
+    .card:hover{
+        height:600px;
+    }
+    .card:hover .product {
+        top:initial;
+        bottom:30px;
+        left:50%;
+        transform:translate(-50%,0%) scale(1);
+        height:300px;
+    }
+    .card .content2{
+        width:100%;
+        left:0;
+        padding:30px;
+    }
+ }
+    /*CONTACTO RESPONSIVE*/
+    @media (max-width:991px){
+        
+        .container-contact{
+            padding:10px;
+            margin:10px;
+        }
+
+        .container5{
+            display:flex;
+            flex-direction: column;
+        }
+        .container5 .contactInfo{
+            height:auto;
+            width:100%;
+            padding:10px;
+            top:0;
+            position:relative;
+            box-shadow: none;
+            flex-direction: row;
+        }
+
+        .container5 .contactForm{
+            position:relative;
+            box-shadow: none;
+            width:100%;
+            padding-left: 0px;
+            margin-left: 0px;
+            padding:20px;
+            height: 400px;
+        }
+
+        .container5 .contactForm h3 {
+            font-size: 1.5rem; 
+         }
+
+         .container5 .contactInfo h3{
+             font-size:1.5rem;
+         }
+
+         .container5 .contactForm .formBox {
+            padding-top: 10px;
+        }
+
+        input.btn{
+            padding:5px;
+            top:-40px;
+            align-items: center;
+        }
+
+ }
+
+        @media (max-width:731px){
+            .container5 .contactInfo {
+                display: none;
+        }
+
+
+    }
+/*RESPONSIVE ENDS*/
